@@ -1,0 +1,32 @@
+name: asl_translator
+description: A Flutter application that translates American Sign Language (ASL) in real-time.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: ^0.5.8+11
+  tflite: ^1.1.1
+  path_provider: ^1.6.27
+  flutter_svg: ^0.19.3
+  provider: ^4.3.3
+  flutter_spinkit: ^4.1.2+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/titan_logo.png
+    - assets/models/pose_model.tflite
+    - assets/models/translation_model.tflite
+
+  module:
+    androidX: true
+    androidPackage: com.example.asl_translator
+    iosBundleIdentifier: com.example.aslTranslator
